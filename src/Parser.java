@@ -13,7 +13,7 @@ public class Parser {
 
         else {
 
-            return new Item(name, cost, isTaxable(name), Values.IMPORTED);}
+            return new Item(name, cost, isTaxable(name), Values.NON_IMPORTED);}
     }
 
     private boolean isTaxable(String name) {
