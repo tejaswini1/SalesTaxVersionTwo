@@ -15,4 +15,8 @@ public class Item {
         return taxable;
     }
 
+    public boolean isImported(){
+        return imported;
+    }
+
 }

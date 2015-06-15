@@ -23,4 +23,13 @@ public class ItemTest {
         assertEquals(false, actual);
     }
 
+    @Test
+    public void shouldReturntrueIfItemIsImported(){
+        Item item = new Item("juice", 30.0, false, true);
+
+        boolean actual = item.isImported();
+
+        assertEquals(true, actual);
+    }
+
 }
