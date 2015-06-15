@@ -1,12 +1,11 @@
 import org.junit.Test;
-import org.mockito.asm.tree.analysis.Value;
 
 import static org.junit.Assert.*;
 
 public class ItemTest {
 
     @Test
-    public void shouldReturnTrueForTaxableItem(){
+    public void shouldReturnTrueForTaxableItem() {
         Item item = new Item("CD", 30.0, Values.TAXABLE, Values.IMPORTED);
 
         boolean actual = item.isTaxable();
@@ -16,7 +15,7 @@ public class ItemTest {
 
 
     @Test
-    public void shouldReturnFalseForTaxableItem(){
+    public void shouldReturnFalseForTaxableItem() {
         Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.IMPORTED);
 
         boolean actual = item.isTaxable();
@@ -25,7 +24,7 @@ public class ItemTest {
     }
 
     @Test
-    public void shouldReturnTrueIfItemIsImported(){
+    public void shouldReturnTrueIfItemIsImported() {
         Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.IMPORTED);
 
         boolean actual = item.isImported();
@@ -34,7 +33,7 @@ public class ItemTest {
     }
 
     @Test
-    public void shouldReturnFalseIfItemIsImported(){
+    public void shouldReturnFalseIfItemIsImported() {
         Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.NON_IMPORTED);
 
         boolean actual = item.isImported();
@@ -43,7 +42,7 @@ public class ItemTest {
     }
 
     @Test
-    public void shouldReturnNameAndCostOfItem(){
+    public void shouldReturnNameAndCostOfItem() {
         Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.NON_IMPORTED);
 
         String actual = item.toString();

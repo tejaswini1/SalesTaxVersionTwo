@@ -8,19 +8,19 @@ public class ImportedTax {
     private double importTax = 0.05;
 
 
-    public ImportedTax(ArrayList<Item> itemsList){
+    public ImportedTax(ArrayList<Item> itemsList) {
         rawItems = itemsList;
     }
-    public void calculate(){
-        for(Item item : rawItems){
-            if(item.isImported())
-            {
+
+    public void calculate() {
+        for (Item item : rawItems) {
+            if (item.isImported()) {
                 double cost = calculateForOneItem(item);
                 items.put(item, cost);
-            }
-            else {
+            } else {
 
-                items.put(item, item.getCost());}
+                items.put(item, item.getCost());
+            }
         }
     }
 
@@ -32,10 +32,9 @@ public class ImportedTax {
         return cost;
     }
 
-    public String toString(){
+    public String toString() {
         String temp = "";
-        for(Item item : items.keySet())
-        {
+        for (Item item : items.keySet()) {
             temp += item.toString() + " " + items.get(item) + "\n";
         }
 

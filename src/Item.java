@@ -15,7 +15,7 @@ public class Item {
         return taxable;
     }
 
-    public double getCost(){
+    public double getCost() {
         return cost;
     }
 
