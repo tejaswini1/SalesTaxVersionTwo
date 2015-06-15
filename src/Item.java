@@ -19,4 +19,8 @@ public class Item {
         return imported;
     }
 
+    @Override
+    public String toString() {
+        return "" + name + " " + cost;
+    }
 }
