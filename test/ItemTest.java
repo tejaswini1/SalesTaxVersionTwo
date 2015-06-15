@@ -35,7 +35,7 @@ public class ItemTest {
 
     @Test
     public void shouldReturnFalseIfItemIsImported(){
-        Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.NON_NONIMPORTED);
+        Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.NON_IMPORTED);
 
         boolean actual = item.isImported();
 
@@ -44,7 +44,7 @@ public class ItemTest {
 
     @Test
     public void shouldReturnNameAndCostOfItem(){
-        Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.NON_NONIMPORTED);
+        Item item = new Item("juice", 30.0, Values.NON_TAXABLE, Values.NON_IMPORTED);
 
         String actual = item.toString();
 
