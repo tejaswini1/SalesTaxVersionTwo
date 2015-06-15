@@ -24,12 +24,21 @@ public class ItemTest {
     }
 
     @Test
-    public void shouldReturntrueIfItemIsImported(){
+    public void shouldReturnTrueIfItemIsImported(){
         Item item = new Item("juice", 30.0, false, true);
 
         boolean actual = item.isImported();
 
         assertEquals(true, actual);
+    }
+
+    @Test
+    public void shouldReturnFalseIfItemIsImported(){
+        Item item = new Item("juice", 30.0, false, false);
+
+        boolean actual = item.isImported();
+
+        assertEquals(false, actual);
     }
 
 }
