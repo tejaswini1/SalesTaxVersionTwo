@@ -1,6 +1,6 @@
 public class Item {
     private String name;
-    private double cost;
+    final double cost;
     private boolean taxable;
     private boolean imported;
 
@@ -15,13 +15,18 @@ public class Item {
         return taxable;
     }
 
+    public double getCost(){
+        return cost;
+    }
+
     public boolean isImported() {
         return imported;
     }
 
+
     @Override
     public String toString() {
-        return "" + name + " " + cost;
+        return "" + name;
     }
 
     @Override

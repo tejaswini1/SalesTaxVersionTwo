@@ -48,7 +48,7 @@ public class ItemTest {
 
         String actual = item.toString();
 
-        assertEquals("juice 30.0", actual);
+        assertEquals("juice", actual);
     }
 
 }
