@@ -13,4 +13,14 @@ public class ItemTest {
         assertEquals(true, actual);
     }
 
+
+    @Test
+    public void shouldReturnFalseForTaxableItem(){
+        Item item = new Item("juice", 30.0, false, true);
+
+        boolean actual = item.isTaxable();
+
+        assertEquals(false, actual);
+    }
+
 }
